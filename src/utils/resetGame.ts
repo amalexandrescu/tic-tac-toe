@@ -1,5 +1,5 @@
 export const resetGame = async (onSuccess?: () => void) => {
-  const res = await fetch("http://localhost:3001/reset", {
+  const res = await fetch(`${process.env.REACT_APP_API_URL}/reset`, {
     method: "POST",
   });
 

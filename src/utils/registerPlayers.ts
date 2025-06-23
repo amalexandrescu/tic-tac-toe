@@ -2,7 +2,7 @@ export const register = async (
   name: string
 ): Promise<{ playerId: number } | { error: string }> => {
   try {
-    const res = await fetch("http://localhost:3001/register", {
+    const res = await fetch(`${process.env.REACT_APP_API_URL}/register`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ name }),

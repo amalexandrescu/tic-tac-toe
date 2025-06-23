@@ -1,6 +1,6 @@
 export const getGameState = async () => {
   try {
-    const res = await fetch("http://localhost:3001/state");
+    const res = await fetch(`${process.env.REACT_APP_API_URL}/state`);
     const data = await res.json();
     return data;
   } catch (error) {
