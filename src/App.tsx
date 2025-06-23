@@ -1,24 +1,19 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import BoardGame from "./components/GameBoard";
+import GameSummary from "./components/GameSummary";
+import RegisterPlayer from "./components/RegisterPlayer";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="h-[100vh] w-[100vw] bg-[lavender] flex justify-center">
+      <div className="flex-col justify-center items-start w-[700px]">
+        <div className="text-xl font-bold text-center pt-[100px]">
+          Tic Tac Toe
+        </div>
+        <div className="flex  bg-[whitesmoke] mt-[100px] p-[50px] rounded-[10px] justify-between">
+          <GameSummary />
+          <BoardGame />
+        </div>
+      </div>
     </div>
   );
 }
